@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="w-50 m-auto p-5 shadow-lg" >
+            <h1>CRUD SYSTEM</h1>
+        <label for="">Product Name</label>
+        <input type="text" class="form-control " id="productName">
+
+        <div class="alert alert-danger mt-3 d-none" id="pnamealert">
+            <p>please start with capital letter</p>
+        </div>
+
+        <div class="alert alert-danger mt-3 d-none" id="pnamenum">
+            <p>min number is 3 max number is 10</p>
+        </div>
+
+        <label for="">Product Category</label>
+        <input type="text" class="form-control" id="productCategory">
+
+        <label for="">Product Price</label>
+        <input type="text" class="form-control" id="productPrice">
+
+        <label for="">Product Description</label>
+        <textarea class="form-control mb-4" name="" id="productDescription"></textarea>
+
+        <button class="btn btn-outline-dark" onclick="crateProduct()" id="newBtn">add product</button>
+        <button class="btn btn-outline-dark" onclick=" clearForm()">clear</button>
+
+        <div id="allData" class="alert alert-danger d-none mt-3">
+            <p >please write all field</p>
+
+        </div>
+
+        </div>
+
+        <input type="text" class="form-control w-50 my-5 m-auto" onkeyup="searchProduct()" id="searchInput" placeholder="search......">
+        <table class="table w-50 m-auto table-striped">
+            <thead>
+                <th>index</th>
+                <th>name</th>
+                <th>category</th>
+                <th>price</th>
+                <th>description</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="tbody">
+               
+            </tbody>
+        </table>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="demo.js"></script>
+    </body>
+</html>
